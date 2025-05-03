@@ -29,4 +29,10 @@ document.getElementById("verAntigas").addEventListener("click", () => {
     const historico = JSON.parse(localStorage.getItem("historico")) || {};
     const lista = Object.entries(historico).map(([data, curiosidade]) => `${data}: ${curiosidade}`);
     alert("Curiosidades passadas:\n\n" + lista.join("\n"));
-  });
+});
+document.getElementById("toggleTheme").addEventListener("click", () => {
+    const atual = document.documentElement.getAttribute("data-theme");
+    const novo = atual === "dark" ? "light" : "dark";
+    document.documentElement.setAttribute("data-theme", novo);
+    localStorage.setItem("tema", novo);
+});
