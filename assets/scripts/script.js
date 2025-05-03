@@ -7,6 +7,13 @@ document.addEventListener("DOMContentLoaded", () => {
         const ano = hoje.getFullYear(); // Ano com 4 dígitos
         return `${ano}-${mes}-${dia}`; // Formato YYYY-MM-DD
     }
+
+    // Função para limpar o histórico de curiosidades
+    function limparHistorico() {
+        localStorage.removeItem("historico");
+        console.log("Histórico limpo!");
+    }
+
     // Função para exibir a curiosidade de hoje
     async function mostrarCuriosidade() {
         const dataHoje = getHoje();
