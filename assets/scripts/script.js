@@ -13,3 +13,15 @@ function getHoje() {
     const hoje = new Date();
     return hoje.toISOString().split('T')[0]; // yyyy-mm-dd
 }
+function mostrarCuriosidade() {
+    const dataHoje = getHoje();
+    let historico = JSON.parse(localStorage.getItem("historico")) || {};
+
+    if (!historico[dataHoje]) {
+        const index = Math.floor(Math.random() * curiosidades.length);
+        historico[dataHoje] = curiosidades[index];
+        localStorage.setItem("historico", JSON.stringify(historico));
+    }
+
+    document.getElementById("curiosidade").innerText = historico[dataHoje];
+}
