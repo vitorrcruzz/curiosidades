@@ -25,3 +25,8 @@ function mostrarCuriosidade() {
 
     document.getElementById("curiosidade").innerText = historico[dataHoje];
 }
+document.getElementById("verAntigas").addEventListener("click", () => {
+    const historico = JSON.parse(localStorage.getItem("historico")) || {};
+    const lista = Object.entries(historico).map(([data, curiosidade]) => `${data}: ${curiosidade}`);
+    alert("Curiosidades passadas:\n\n" + lista.join("\n"));
+  });
