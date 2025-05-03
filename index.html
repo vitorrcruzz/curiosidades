@@ -9,21 +9,22 @@
 </head>
 
 <body>
-
     <div class="container">
         <h1>Curiosidade do Dia</h1>
         <p id="curiosidade">Carregando curiosidade...</p>
-        <p id="estatisticas">Você já leu 0 curiosidades diferentes!</p>
-        <button id="verAntigas">Ver curiosidades passadas</button>
+        <p id="estatisticas"></p>
         <button id="tema">Alterar Tema</button>
 
-        <ul id="historico">
-            <!-- Aqui aparecerá o histórico -->
-        </ul>
+        <button id="ver-historico">Ver Curiosidades Passadas</button>
+
+        <!--Historico de curiosidades -->
+        <div id="historico-container" style="display: none;">
+            <h2>Curiosidades Anteriores</h2>
+            <ul id="historico"></ul>
+        </div>
     </div>
 
     <script src="assets/scripts/script.js"></script>
-
 </body>
 
 </html>

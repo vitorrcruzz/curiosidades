@@ -53,10 +53,17 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+    // Exibir histórico ao clicar no botão
+    function exibirHistorico() {
+        const historicoContainer = document.getElementById("historico-container");
+        historicoContainer.style.display = historicoContainer.style.display === "none" ? "block" : "none";
+    }
+
     // Executa tudo
     aplicarTemaSalvo();
     mostrarCuriosidade();
 
-    // Adiciona o event listener ao botão
+    // Adiciona os event listeners aos botões
     document.querySelector("button#tema").addEventListener("click", alternarTema);
+    document.querySelector("button#ver-historico").addEventListener("click", exibirHistorico);
 });

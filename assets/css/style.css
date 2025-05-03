@@ -59,11 +59,15 @@ button:hover {
     background-color: #0056b3;
 }
 
-/* Histórico */
+/* Histórico escondido */
+#historico-container {
+    display: none;
+    margin-top: 2rem;
+}
+
 ul#historico {
     list-style-type: disc;
     padding-left: 1.5rem;
-    margin-top: 2rem;
     text-align: left;
 }
 
