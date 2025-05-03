@@ -1,37 +1,88 @@
-:root {
-    --bg-color: #ffffff;
-    --text-color: #000000;
-    --button-bg: #f0f0f0;
-}
-
-[data-theme="dark"] {
-    --bg-color: #121212;
-    --text-color: #ffffff;
-    --button-bg: #333333;
-}
-
-body {
+/* Reset básico */
+* {
     margin: 0;
-    font-family: sans-serif;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+/* Centralização total */
+body {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Container central com layout em coluna */
 .container {
     text-align: center;
     max-width: 600px;
-    padding: 20px;
+    width: 90%;
+    padding: 2rem;
 }
 
+/* Títulos e texto */
+h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+#curiosidade {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+#estatisticas {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+}
+
+/* Botão */
 button {
-    margin: 10px;
-    padding: 10px 20px;
-    background-color: var(--button-bg);
-    border: none;
-    border-radius: 5px;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
     cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    background-color: #007bff;
+    color: white;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-bottom: 1rem;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Histórico */
+ul#historico {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin-top: 2rem;
+    text-align: left;
+}
+
+ul#historico li {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+/* Modo escuro */
+body.modo-escuro {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.modo-escuro button {
+    background-color: #444;
+    color: #fff;
+}
+
+body.modo-escuro button:hover {
+    background-color: #666;
 }
