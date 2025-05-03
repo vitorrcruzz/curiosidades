@@ -9,3 +9,7 @@ const curiosidades = [
     "Saturno é tão leve (comparativamente) que flutuaria em uma piscina gigante de água — se fosse possível.",
     "O relâmpago é cinco vezes mais quente do que a superfície do Sol."
 ];
+function getHoje() {
+    const hoje = new Date();
+    return hoje.toISOString().split('T')[0]; // yyyy-mm-dd
+}
