@@ -23,7 +23,11 @@ function mostrarCuriosidade() {
         localStorage.setItem("historico", JSON.stringify(historico));
     }
 
-    document.getElementById("curiosidade").innerText = historico[dataHoje];
+    const curiosidadeHoje = historico[dataHoje];
+    document.getElementById("curiosidade").innerText = curiosidadeHoje;
+
+    const total = Object.keys(historico).length;
+    document.getElementById("estatisticas").innerText = `Você já leu ${total} curiosidade${total > 1 ? 's' : ''} diferente${total > 1 ? 's' : ''}!`;
 }
 document.getElementById("verAntigas").addEventListener("click", () => {
     const historico = JSON.parse(localStorage.getItem("historico")) || {};
