@@ -36,3 +36,10 @@ document.getElementById("toggleTheme").addEventListener("click", () => {
     document.documentElement.setAttribute("data-theme", novo);
     localStorage.setItem("tema", novo);
 });
+function aplicarTemaSalvo() {
+    const tema = localStorage.getItem("tema") || "light";
+    document.documentElement.setAttribute("data-theme", tema);
+}
+
+aplicarTemaSalvo();
+mostrarCuriosidade();
