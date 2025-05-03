@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // Atualiza as estatísticas
         const total = Object.keys(historico).length;
         document.getElementById("estatisticas").innerText =
-            `Você já leu ${total} curiosidade${total > 1 ? 's' : ''} diferente${total > 1 ? 's' : ''}!`;
+            `You've already read ${total} different${total > 1 ? 's' : ''} curiosity${total > 1 ? 's' : ''}!`;
 
         // Exibe o histórico corretamente
         mostrarHistorico(historico);
