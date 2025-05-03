@@ -3,3 +3,11 @@
     --text-color: #000000;
     --button-bg: #f0f0f0;
   }
+  
+  [data-theme="dark"] {
+    --bg-color: #121212;
+    --text-color: #ffffff;
+    --button-bg: #333333;
+  }
+  
+  
